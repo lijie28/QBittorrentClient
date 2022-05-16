@@ -1,0 +1,633 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0472A596283246950076F39D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0472A595283246950076F39D /* AppDelegate.swift */; };
+		0472A598283246950076F39D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0472A597283246950076F39D /* SceneDelegate.swift */; };
+		0472A59A283246950076F39D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0472A599283246950076F39D /* ViewController.swift */; };
+		0472A59D283246950076F39D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0472A59B283246950076F39D /* Main.storyboard */; };
+		0472A59F283246960076F39D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0472A59E283246960076F39D /* Assets.xcassets */; };
+		0472A5A2283246960076F39D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0472A5A0283246960076F39D /* LaunchScreen.storyboard */; };
+		0472A5AD283246960076F39D /* QBittorrentClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0472A5AC283246960076F39D /* QBittorrentClientTests.swift */; };
+		0472A5B7283246960076F39D /* QBittorrentClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0472A5B6283246960076F39D /* QBittorrentClientUITests.swift */; };
+		0472A5B9283246960076F39D /* QBittorrentClientUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0472A5B8283246960076F39D /* QBittorrentClientUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0472A5A9283246960076F39D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0472A58A283246950076F39D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0472A591283246950076F39D;
+			remoteInfo = QBittorrentClient;
+		};
+		0472A5B3283246960076F39D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0472A58A283246950076F39D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0472A591283246950076F39D;
+			remoteInfo = QBittorrentClient;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0472A592283246950076F39D /* QBittorrentClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QBittorrentClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0472A595283246950076F39D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0472A597283246950076F39D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		0472A599283246950076F39D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0472A59C283246950076F39D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0472A59E283246960076F39D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0472A5A1283246960076F39D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0472A5A3283246960076F39D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0472A5A8283246960076F39D /* QBittorrentClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QBittorrentClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0472A5AC283246960076F39D /* QBittorrentClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QBittorrentClientTests.swift; sourceTree = "<group>"; };
+		0472A5B2283246960076F39D /* QBittorrentClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QBittorrentClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0472A5B6283246960076F39D /* QBittorrentClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QBittorrentClientUITests.swift; sourceTree = "<group>"; };
+		0472A5B8283246960076F39D /* QBittorrentClientUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QBittorrentClientUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0472A58F283246950076F39D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0472A5A5283246960076F39D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0472A5AF283246960076F39D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0472A589283246950076F39D = {
+			isa = PBXGroup;
+			children = (
+				0472A594283246950076F39D /* QBittorrentClient */,
+				0472A5AB283246960076F39D /* QBittorrentClientTests */,
+				0472A5B5283246960076F39D /* QBittorrentClientUITests */,
+				0472A593283246950076F39D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0472A593283246950076F39D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0472A592283246950076F39D /* QBittorrentClient.app */,
+				0472A5A8283246960076F39D /* QBittorrentClientTests.xctest */,
+				0472A5B2283246960076F39D /* QBittorrentClientUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0472A594283246950076F39D /* QBittorrentClient */ = {
+			isa = PBXGroup;
+			children = (
+				0472A595283246950076F39D /* AppDelegate.swift */,
+				0472A597283246950076F39D /* SceneDelegate.swift */,
+				0472A599283246950076F39D /* ViewController.swift */,
+				0472A59B283246950076F39D /* Main.storyboard */,
+				0472A59E283246960076F39D /* Assets.xcassets */,
+				0472A5A0283246960076F39D /* LaunchScreen.storyboard */,
+				0472A5A3283246960076F39D /* Info.plist */,
+			);
+			path = QBittorrentClient;
+			sourceTree = "<group>";
+		};
+		0472A5AB283246960076F39D /* QBittorrentClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				0472A5AC283246960076F39D /* QBittorrentClientTests.swift */,
+			);
+			path = QBittorrentClientTests;
+			sourceTree = "<group>";
+		};
+		0472A5B5283246960076F39D /* QBittorrentClientUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0472A5B6283246960076F39D /* QBittorrentClientUITests.swift */,
+				0472A5B8283246960076F39D /* QBittorrentClientUITestsLaunchTests.swift */,
+			);
+			path = QBittorrentClientUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0472A591283246950076F39D /* QBittorrentClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0472A5BC283246960076F39D /* Build configuration list for PBXNativeTarget "QBittorrentClient" */;
+			buildPhases = (
+				0472A58E283246950076F39D /* Sources */,
+				0472A58F283246950076F39D /* Frameworks */,
+				0472A590283246950076F39D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QBittorrentClient;
+			productName = QBittorrentClient;
+			productReference = 0472A592283246950076F39D /* QBittorrentClient.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0472A5A7283246960076F39D /* QBittorrentClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0472A5BF283246960076F39D /* Build configuration list for PBXNativeTarget "QBittorrentClientTests" */;
+			buildPhases = (
+				0472A5A4283246960076F39D /* Sources */,
+				0472A5A5283246960076F39D /* Frameworks */,
+				0472A5A6283246960076F39D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0472A5AA283246960076F39D /* PBXTargetDependency */,
+			);
+			name = QBittorrentClientTests;
+			productName = QBittorrentClientTests;
+			productReference = 0472A5A8283246960076F39D /* QBittorrentClientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0472A5B1283246960076F39D /* QBittorrentClientUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0472A5C2283246960076F39D /* Build configuration list for PBXNativeTarget "QBittorrentClientUITests" */;
+			buildPhases = (
+				0472A5AE283246960076F39D /* Sources */,
+				0472A5AF283246960076F39D /* Frameworks */,
+				0472A5B0283246960076F39D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0472A5B4283246960076F39D /* PBXTargetDependency */,
+			);
+			name = QBittorrentClientUITests;
+			productName = QBittorrentClientUITests;
+			productReference = 0472A5B2283246960076F39D /* QBittorrentClientUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0472A58A283246950076F39D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					0472A591283246950076F39D = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					0472A5A7283246960076F39D = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 0472A591283246950076F39D;
+					};
+					0472A5B1283246960076F39D = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 0472A591283246950076F39D;
+					};
+				};
+			};
+			buildConfigurationList = 0472A58D283246950076F39D /* Build configuration list for PBXProject "QBittorrentClient" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0472A589283246950076F39D;
+			productRefGroup = 0472A593283246950076F39D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0472A591283246950076F39D /* QBittorrentClient */,
+				0472A5A7283246960076F39D /* QBittorrentClientTests */,
+				0472A5B1283246960076F39D /* QBittorrentClientUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0472A590283246950076F39D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0472A5A2283246960076F39D /* LaunchScreen.storyboard in Resources */,
+				0472A59F283246960076F39D /* Assets.xcassets in Resources */,
+				0472A59D283246950076F39D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0472A5A6283246960076F39D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0472A5B0283246960076F39D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0472A58E283246950076F39D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0472A59A283246950076F39D /* ViewController.swift in Sources */,
+				0472A596283246950076F39D /* AppDelegate.swift in Sources */,
+				0472A598283246950076F39D /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0472A5A4283246960076F39D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0472A5AD283246960076F39D /* QBittorrentClientTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0472A5AE283246960076F39D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0472A5B9283246960076F39D /* QBittorrentClientUITestsLaunchTests.swift in Sources */,
+				0472A5B7283246960076F39D /* QBittorrentClientUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0472A5AA283246960076F39D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0472A591283246950076F39D /* QBittorrentClient */;
+			targetProxy = 0472A5A9283246960076F39D /* PBXContainerItemProxy */;
+		};
+		0472A5B4283246960076F39D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0472A591283246950076F39D /* QBittorrentClient */;
+			targetProxy = 0472A5B3283246960076F39D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0472A59B283246950076F39D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0472A59C283246950076F39D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0472A5A0283246960076F39D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0472A5A1283246960076F39D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0472A5BA283246960076F39D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0472A5BB283246960076F39D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0472A5BD283246960076F39D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = QBittorrentClient/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = QBittorrent;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qbittorrent.QBittorrentClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0472A5BE283246960076F39D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = QBittorrentClient/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = QBittorrent;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qbittorrent.QBittorrentClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0472A5C0283246960076F39D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 37G8Q52T2C;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lijie.QBittorrentClientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QBittorrentClient.app/QBittorrentClient";
+			};
+			name = Debug;
+		};
+		0472A5C1283246960076F39D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 37G8Q52T2C;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lijie.QBittorrentClientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QBittorrentClient.app/QBittorrentClient";
+			};
+			name = Release;
+		};
+		0472A5C3283246960076F39D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 37G8Q52T2C;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lijie.QBittorrentClientUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = QBittorrentClient;
+			};
+			name = Debug;
+		};
+		0472A5C4283246960076F39D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 37G8Q52T2C;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lijie.QBittorrentClientUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = QBittorrentClient;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0472A58D283246950076F39D /* Build configuration list for PBXProject "QBittorrentClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0472A5BA283246960076F39D /* Debug */,
+				0472A5BB283246960076F39D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0472A5BC283246960076F39D /* Build configuration list for PBXNativeTarget "QBittorrentClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0472A5BD283246960076F39D /* Debug */,
+				0472A5BE283246960076F39D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0472A5BF283246960076F39D /* Build configuration list for PBXNativeTarget "QBittorrentClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0472A5C0283246960076F39D /* Debug */,
+				0472A5C1283246960076F39D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0472A5C2283246960076F39D /* Build configuration list for PBXNativeTarget "QBittorrentClientUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0472A5C3283246960076F39D /* Debug */,
+				0472A5C4283246960076F39D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0472A58A283246950076F39D /* Project object */;
+}
