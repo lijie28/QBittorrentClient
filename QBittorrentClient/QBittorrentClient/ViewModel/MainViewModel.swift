@@ -11,6 +11,7 @@ class MainViewModel: ObservableObject {
     
     @Published var showingSetting = false
     @Published var title: String? = nil
+    @Published var modelList: [CellInfo] = []
     
     init() {
         self.refreshStatus()
@@ -31,7 +32,20 @@ class MainViewModel: ObservableObject {
                 debugPrint(respondError!.description)
                 return
             }
-            debugPrint(respondResult)
+            guard let dataList = respondResult else {
+                debugPrint("no list")
+                return
+            }
+            var temp = [CellInfo]()
+            for data in dataList {
+                print(data)
+                if let dict = data as? [String: Any], let model = TorrentModel.active(fromDict: dict) {
+                    temp.append(CellInfo(type: .content, value: model))
+                }
+            }
+            DispatchQueue.main.async {
+                self.modelList = temp
+            }
         }
     }
 }

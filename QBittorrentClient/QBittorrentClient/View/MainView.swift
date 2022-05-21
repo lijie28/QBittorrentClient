@@ -7,12 +7,47 @@
 
 import SwiftUI
 
+extension Int {
+    func getSizeString() -> String {
+        var sizeStr = ""
+        if self > 1024 * 1024 * 1024 {
+            sizeStr = String(format: "%.2f Gib", Double(self) / (1024 * 1024 * 1024))
+        }
+        else if self > 1024 * 1024{
+            sizeStr = String(format: "%.2f Mib", Double(self) / (1024 * 1024 ))
+        }
+        else if self > 1024{
+            sizeStr = String(format: "%.2f Kib", Double(self) / 1024)
+        }
+        else{
+            sizeStr = String(format: "%d B", self)
+        }
+        return sizeStr
+    }
+}
+
 struct MainView: View {
     @ObservedObject var viewModel: MainViewModel
     
     var body: some View {
         NavigationView {
-            EmptyView()
+            List(viewModel.modelList, id: \.id ) { item in
+                if item.type == .content, item.value is TorrentModel {
+                    let model = item.value as! TorrentModel
+                    
+                    VStack(alignment: .leading, spacing: 0) {
+                        Text(model.name)
+                        
+                        HStack() {
+                            Text(model.size.getSizeString())
+                            Text(String(format: "%.2f%%" , model.progress*100))
+                        }
+                        
+                    }
+                }
+            }
+            .listStyle(PlainListStyle())
+            .animation(.none, value: 0)
                 .navigationBarItems(
                     leading: HStack {
                         BarButtonItem(imageSystemName: "square.and.pencil", onClicked: {
