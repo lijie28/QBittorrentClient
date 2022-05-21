@@ -1,0 +1,6 @@
+module Pods_QBittorrentClient {
+  umbrella header "Pods-QBittorrentClient-umbrella.h"
+
+  export *
+  module * { export * }
+}

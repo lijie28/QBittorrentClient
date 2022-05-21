@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0405440D283880110065EA6F /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0405440C283880110065EA6F /* APIError.swift */; };
+		0422770728351FAD001DF6FD /* DefaultUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422770628351FAD001DF6FD /* DefaultUtils.swift */; };
+		0422770928352019001DF6FD /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422770828352019001DF6FD /* SettingModel.swift */; };
+		0422770F28372DA4001DF6FD /* MessageBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422770E28372DA4001DF6FD /* MessageBarView.swift */; };
+		0422771128372DCC001DF6FD /* CellInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422771028372DCC001DF6FD /* CellInfo.swift */; };
+		042277132837669C001DF6FD /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042277122837669C001DF6FD /* MainViewModel.swift */; };
+		0422771628376CF4001DF6FD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422771528376CF4001DF6FD /* NetworkManager.swift */; };
 		0472A596283246950076F39D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0472A595283246950076F39D /* AppDelegate.swift */; };
 		0472A598283246950076F39D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0472A597283246950076F39D /* SceneDelegate.swift */; };
 		0472A59A283246950076F39D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0472A599283246950076F39D /* ViewController.swift */; };
@@ -16,6 +23,17 @@
 		0472A5AD283246960076F39D /* QBittorrentClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0472A5AC283246960076F39D /* QBittorrentClientTests.swift */; };
 		0472A5B7283246960076F39D /* QBittorrentClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0472A5B6283246960076F39D /* QBittorrentClientUITests.swift */; };
 		0472A5B9283246960076F39D /* QBittorrentClientUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0472A5B8283246960076F39D /* QBittorrentClientUITestsLaunchTests.swift */; };
+		0472A5C7283410CA0076F39D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0472A5C6283410CA0076F39D /* MainView.swift */; };
+		0472A5CA283411E70076F39D /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0472A5C9283411E70076F39D /* SettingViewModel.swift */; };
+		0472A5CC2834120E0076F39D /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0472A5CB2834120E0076F39D /* SettingView.swift */; };
+		0472A5CF283412650076F39D /* BarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0472A5CE283412650076F39D /* BarItem.swift */; };
+		0472A5D12834127F0076F39D /* BaseIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0472A5D02834127F0076F39D /* BaseIconView.swift */; };
+		0472A5D32834128C0076F39D /* BaseEditingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0472A5D22834128C0076F39D /* BaseEditingView.swift */; };
+		0472A5D6283413090076F39D /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0472A5D5283413090076F39D /* AppConfig.swift */; };
+		0472A5DB2834146A0076F39D /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0472A5DA2834146A0076F39D /* R.generated.swift */; };
+		268CE34DEA2207C111210BD0 /* libPods-QBittorrentClient-QBittorrentClientUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 34E7B0729832DDF7BFEF0ABA /* libPods-QBittorrentClient-QBittorrentClientUITests.a */; };
+		2C8F0898B8D2EAE5815740AA /* libPods-QBittorrentClientTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3D73C30EC993D096E87E0F1 /* libPods-QBittorrentClientTests.a */; };
+		734241875586E21DD98FC12F /* libPods-QBittorrentClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 700CECB0C98C10B4D281ED8A /* libPods-QBittorrentClient.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +54,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02E5887C05147176A751A4BD /* Pods-QBittorrentClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QBittorrentClient.debug.xcconfig"; path = "Target Support Files/Pods-QBittorrentClient/Pods-QBittorrentClient.debug.xcconfig"; sourceTree = "<group>"; };
+		0405440C283880110065EA6F /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		0422770628351FAD001DF6FD /* DefaultUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultUtils.swift; sourceTree = "<group>"; };
+		0422770828352019001DF6FD /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
+		0422770E28372DA4001DF6FD /* MessageBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageBarView.swift; sourceTree = "<group>"; };
+		0422771028372DCC001DF6FD /* CellInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellInfo.swift; sourceTree = "<group>"; };
+		042277122837669C001DF6FD /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		0422771528376CF4001DF6FD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		0472A592283246950076F39D /* QBittorrentClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QBittorrentClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0472A595283246950076F39D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0472A597283246950076F39D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +75,22 @@
 		0472A5B2283246960076F39D /* QBittorrentClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QBittorrentClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0472A5B6283246960076F39D /* QBittorrentClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QBittorrentClientUITests.swift; sourceTree = "<group>"; };
 		0472A5B8283246960076F39D /* QBittorrentClientUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QBittorrentClientUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0472A5C6283410CA0076F39D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		0472A5C9283411E70076F39D /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
+		0472A5CB2834120E0076F39D /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		0472A5CE283412650076F39D /* BarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarItem.swift; sourceTree = "<group>"; };
+		0472A5D02834127F0076F39D /* BaseIconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseIconView.swift; sourceTree = "<group>"; };
+		0472A5D22834128C0076F39D /* BaseEditingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseEditingView.swift; sourceTree = "<group>"; };
+		0472A5D5283413090076F39D /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		0472A5DA2834146A0076F39D /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		06DFCA655F238E47D1872B68 /* Pods-QBittorrentClientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QBittorrentClientTests.release.xcconfig"; path = "Target Support Files/Pods-QBittorrentClientTests/Pods-QBittorrentClientTests.release.xcconfig"; sourceTree = "<group>"; };
+		193BB4A99E58124A406D743C /* Pods-QBittorrentClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QBittorrentClient.release.xcconfig"; path = "Target Support Files/Pods-QBittorrentClient/Pods-QBittorrentClient.release.xcconfig"; sourceTree = "<group>"; };
+		34E7B0729832DDF7BFEF0ABA /* libPods-QBittorrentClient-QBittorrentClientUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QBittorrentClient-QBittorrentClientUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CEECBE278EB1C60FE184D5A /* Pods-QBittorrentClientTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QBittorrentClientTests.debug.xcconfig"; path = "Target Support Files/Pods-QBittorrentClientTests/Pods-QBittorrentClientTests.debug.xcconfig"; sourceTree = "<group>"; };
+		700CECB0C98C10B4D281ED8A /* libPods-QBittorrentClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QBittorrentClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		76CA01A16C12C111C11C33BA /* Pods-QBittorrentClient-QBittorrentClientUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QBittorrentClient-QBittorrentClientUITests.release.xcconfig"; path = "Target Support Files/Pods-QBittorrentClient-QBittorrentClientUITests/Pods-QBittorrentClient-QBittorrentClientUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CD18A19631EDAB830DCB43DC /* Pods-QBittorrentClient-QBittorrentClientUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QBittorrentClient-QBittorrentClientUITests.debug.xcconfig"; path = "Target Support Files/Pods-QBittorrentClient-QBittorrentClientUITests/Pods-QBittorrentClient-QBittorrentClientUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E3D73C30EC993D096E87E0F1 /* libPods-QBittorrentClientTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QBittorrentClientTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				734241875586E21DD98FC12F /* libPods-QBittorrentClient.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C8F0898B8D2EAE5815740AA /* libPods-QBittorrentClientTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,19 +114,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				268CE34DEA2207C111210BD0 /* libPods-QBittorrentClient-QBittorrentClientUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0422770528351FA2001DF6FD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0422770628351FAD001DF6FD /* DefaultUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		0422771428376CE6001DF6FD /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				0422771528376CF4001DF6FD /* NetworkManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		0472A589283246950076F39D = {
 			isa = PBXGroup;
 			children = (
+				0472A5DA2834146A0076F39D /* R.generated.swift */,
 				0472A594283246950076F39D /* QBittorrentClient */,
 				0472A5AB283246960076F39D /* QBittorrentClientTests */,
 				0472A5B5283246960076F39D /* QBittorrentClientUITests */,
 				0472A593283246950076F39D /* Products */,
+				10589C676FE2CDDF7C6A06F8 /* Pods */,
+				D72E119DA5F1442506ACCE87 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +163,11 @@
 		0472A594283246950076F39D /* QBittorrentClient */ = {
 			isa = PBXGroup;
 			children = (
+				0422771428376CE6001DF6FD /* Manager */,
+				0422770528351FA2001DF6FD /* Utils */,
+				0472A5D4283412FC0076F39D /* Model */,
+				0472A5C8283411BF0076F39D /* ViewModel */,
+				0472A5C5283410BB0076F39D /* View */,
 				0472A595283246950076F39D /* AppDelegate.swift */,
 				0472A597283246950076F39D /* SceneDelegate.swift */,
 				0472A599283246950076F39D /* ViewController.swift */,
@@ -127,6 +196,70 @@
 			path = QBittorrentClientUITests;
 			sourceTree = "<group>";
 		};
+		0472A5C5283410BB0076F39D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0472A5CD2834125A0076F39D /* BaseView */,
+				0472A5C6283410CA0076F39D /* MainView.swift */,
+				0472A5CB2834120E0076F39D /* SettingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0472A5C8283411BF0076F39D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0472A5C9283411E70076F39D /* SettingViewModel.swift */,
+				042277122837669C001DF6FD /* MainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0472A5CD2834125A0076F39D /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				0422770E28372DA4001DF6FD /* MessageBarView.swift */,
+				0472A5D22834128C0076F39D /* BaseEditingView.swift */,
+				0472A5D02834127F0076F39D /* BaseIconView.swift */,
+				0472A5CE283412650076F39D /* BarItem.swift */,
+			);
+			path = BaseView;
+			sourceTree = "<group>";
+		};
+		0472A5D4283412FC0076F39D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0422771028372DCC001DF6FD /* CellInfo.swift */,
+				0472A5D5283413090076F39D /* AppConfig.swift */,
+				0422770828352019001DF6FD /* SettingModel.swift */,
+				0405440C283880110065EA6F /* APIError.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		10589C676FE2CDDF7C6A06F8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				02E5887C05147176A751A4BD /* Pods-QBittorrentClient.debug.xcconfig */,
+				193BB4A99E58124A406D743C /* Pods-QBittorrentClient.release.xcconfig */,
+				CD18A19631EDAB830DCB43DC /* Pods-QBittorrentClient-QBittorrentClientUITests.debug.xcconfig */,
+				76CA01A16C12C111C11C33BA /* Pods-QBittorrentClient-QBittorrentClientUITests.release.xcconfig */,
+				6CEECBE278EB1C60FE184D5A /* Pods-QBittorrentClientTests.debug.xcconfig */,
+				06DFCA655F238E47D1872B68 /* Pods-QBittorrentClientTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D72E119DA5F1442506ACCE87 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				700CECB0C98C10B4D281ED8A /* libPods-QBittorrentClient.a */,
+				34E7B0729832DDF7BFEF0ABA /* libPods-QBittorrentClient-QBittorrentClientUITests.a */,
+				E3D73C30EC993D096E87E0F1 /* libPods-QBittorrentClientTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,6 +267,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0472A5BC283246960076F39D /* Build configuration list for PBXNativeTarget "QBittorrentClient" */;
 			buildPhases = (
+				CE40084472B1D8B0AC73E7AE /* [CP] Check Pods Manifest.lock */,
+				0472A5D9283414260076F39D /* ShellScript */,
 				0472A58E283246950076F39D /* Sources */,
 				0472A58F283246950076F39D /* Frameworks */,
 				0472A590283246950076F39D /* Resources */,
@@ -151,6 +286,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0472A5BF283246960076F39D /* Build configuration list for PBXNativeTarget "QBittorrentClientTests" */;
 			buildPhases = (
+				5F3BFC56ECCA6749D888221C /* [CP] Check Pods Manifest.lock */,
 				0472A5A4283246960076F39D /* Sources */,
 				0472A5A5283246960076F39D /* Frameworks */,
 				0472A5A6283246960076F39D /* Resources */,
@@ -169,6 +305,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0472A5C2283246960076F39D /* Build configuration list for PBXNativeTarget "QBittorrentClientUITests" */;
 			buildPhases = (
+				39A1D913BA3A3CDE28623802 /* [CP] Check Pods Manifest.lock */,
 				0472A5AE283246960076F39D /* Sources */,
 				0472A5AF283246960076F39D /* Frameworks */,
 				0472A5B0283246960076F39D /* Resources */,
@@ -253,14 +390,117 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0472A5D9283414260076F39D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+		39A1D913BA3A3CDE28623802 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QBittorrentClient-QBittorrentClientUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F3BFC56ECCA6749D888221C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QBittorrentClientTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE40084472B1D8B0AC73E7AE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QBittorrentClient-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0472A58E283246950076F39D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0472A5CA283411E70076F39D /* SettingViewModel.swift in Sources */,
+				0472A5D6283413090076F39D /* AppConfig.swift in Sources */,
 				0472A59A283246950076F39D /* ViewController.swift in Sources */,
+				0422771128372DCC001DF6FD /* CellInfo.swift in Sources */,
+				0472A5C7283410CA0076F39D /* MainView.swift in Sources */,
+				0472A5CC2834120E0076F39D /* SettingView.swift in Sources */,
+				0472A5D32834128C0076F39D /* BaseEditingView.swift in Sources */,
+				0472A5D12834127F0076F39D /* BaseIconView.swift in Sources */,
+				0422770928352019001DF6FD /* SettingModel.swift in Sources */,
+				0422770F28372DA4001DF6FD /* MessageBarView.swift in Sources */,
+				0422771628376CF4001DF6FD /* NetworkManager.swift in Sources */,
 				0472A596283246950076F39D /* AppDelegate.swift in Sources */,
 				0472A598283246950076F39D /* SceneDelegate.swift in Sources */,
+				0472A5DB2834146A0076F39D /* R.generated.swift in Sources */,
+				0472A5CF283412650076F39D /* BarItem.swift in Sources */,
+				0422770728351FAD001DF6FD /* DefaultUtils.swift in Sources */,
+				042277132837669C001DF6FD /* MainViewModel.swift in Sources */,
+				0405440D283880110065EA6F /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,12 +674,14 @@
 		};
 		0472A5BD283246960076F39D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02E5887C05147176A751A4BD /* Pods-QBittorrentClient.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = T9LUTVZ3X2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QBittorrentClient/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = QBittorrent;
@@ -464,12 +706,14 @@
 		};
 		0472A5BE283246960076F39D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 193BB4A99E58124A406D743C /* Pods-QBittorrentClient.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = T9LUTVZ3X2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QBittorrentClient/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = QBittorrent;
@@ -494,6 +738,7 @@
 		};
 		0472A5C0283246960076F39D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CEECBE278EB1C60FE184D5A /* Pods-QBittorrentClientTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -519,9 +764,11 @@
 		};
 		0472A5C1283246960076F39D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06DFCA655F238E47D1872B68 /* Pods-QBittorrentClientTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 37G8Q52T2C;
@@ -544,6 +791,7 @@
 		};
 		0472A5C3283246960076F39D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD18A19631EDAB830DCB43DC /* Pods-QBittorrentClient-QBittorrentClientUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -567,6 +815,7 @@
 		};
 		0472A5C4283246960076F39D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76CA01A16C12C111C11C33BA /* Pods-QBittorrentClient-QBittorrentClientUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

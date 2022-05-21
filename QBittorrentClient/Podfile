@@ -1,0 +1,16 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '15.0'
+
+target 'QBittorrentClient' do
+  pod 'R.swift', '~> 6.1.0'
+
+  target 'QBittorrentClientTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'QBittorrentClientUITests' do
+    # Pods for testing
+  end
+
+end
