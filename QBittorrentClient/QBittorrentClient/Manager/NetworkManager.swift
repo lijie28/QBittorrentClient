@@ -12,6 +12,36 @@ class NetworkManager: NSObject {
     static let shared = NetworkManager()
     
     
+    func setAllTorrents(pause: Bool, completition: (([AnyObject]?, APIError?) -> Void)?) {
+        
+        guard let config = DefaultUtils.shared.getSettingModel() else {
+            completition?(nil, APIError.unknown)
+            return
+        }
+        let baseUrlString = "http://\(config.ip):\(config.port)"
+        let requestUrlString = pause ? baseUrlString + "/command/pauseAll" : baseUrlString + "/command/resumeAll"
+        
+        
+        guard let url = URL(string: requestUrlString) else {
+            completition?(nil, APIError.unknown)
+            return
+        }
+        
+        guard let token = DefaultUtils.shared.getToken() else {
+            completition?(nil, APIError.unknown)
+            return
+        }
+        
+        let headers = [
+            "User-Agent": "Fiddler",
+            "Content-Type": "application/x-www-form-urlencoded",
+            "Cookie": "SID=\(token)",
+        ]
+        self.baseRequest(httpMethod: "GET", url: url, headers: headers, parameters: nil) { result, err, cookies in
+            completition?(result, err)
+        }
+    }
+    
     func getList(parameters: String? = nil, completition: @escaping (([AnyObject]?, APIError?) -> Void)) {
         
         guard let config = DefaultUtils.shared.getSettingModel() else {
@@ -38,27 +68,8 @@ class NetworkManager: NSObject {
             "Content-Type": "text/plain",
             "Cookie": "SID=\(token)",
         ]
-//        let parameters = "username=\(config.username)&password=\(config.pwd)"
         self.baseRequest(httpMethod: "GET", url: url, headers: headers, parameters: parameters) { result, err, cookies in
-            
             completition(result, err)
-//            if let error = err, error.isUnacceptableError {
-//                debugPrint(error.description)
-//                completition(error)
-//                return
-//            }
-//            if let cookies = cookies {
-//                for cookie in cookies {
-//                    if cookie.name == "SID" {
-//                        let token = cookie.value
-//                        DefaultUtils.shared.setToken(token)
-//                        completition(nil)
-//                        return
-//                    }
-//                }
-//            }
-//            completition(APIError.unknown)
-//            return
         }
     }
     

@@ -45,7 +45,7 @@ struct SettingView: View {
                 .padding([.leading, .trailing], 8)
             }
             .navigationBarItems(
-                leading: BarButtonItem(imageSystemName: "xmark", onClicked: {
+                leading: BaseButtonView(imageSystemName: "xmark", onClicked: {
                     if viewModel.isEditing {
                         viewModel.cancelEditting()
                     } else {
@@ -70,7 +70,7 @@ struct SettingView: View {
                 Button {
                     viewModel.cleanSSHResut()
                 } label: {
-                    BaseIconView(systemName: "trash")
+                    BaseIconView(imageSystemName: "trash")
                 }
                 .padding(.trailing, 10)
             }

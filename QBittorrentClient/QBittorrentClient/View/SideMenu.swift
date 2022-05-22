@@ -83,6 +83,14 @@ struct MenuContent: View {
                 selectButtonIndex(5)
             }
             .padding( 20)
+            Button("pauseAll") {
+                selectButtonIndex(6)
+            }
+            .padding( 20)
+            Button("resumeAll") {
+                selectButtonIndex(7)
+            }
+            .padding( 20)
 //            .padding(.top, 20)
         }
     }

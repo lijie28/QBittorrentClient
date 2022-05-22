@@ -17,7 +17,7 @@ class MainViewModel: ObservableObject {
     
     
     private var myTimer: Timer? = nil
-    let sortTypeString = ["Size", "Done", "Down", "up"]
+    let sortTypeString = ["Down", "up", "Size", "Done"]
     let filterList = ["all", "downloading", "completed", "paused", "active", "inactive"]
     var selectFilterIndex = 0
     
@@ -39,8 +39,16 @@ class MainViewModel: ObservableObject {
     func sideMenuSelectButtonIndex(_ index: NSInteger) {
         if index < 6 {
             self.selectFilterIndex = index
+            self.refreshStatus(forceUpdate: true)
+        } else if index == 6 {
+            NetworkManager.shared.setAllTorrents(pause: true) { _,_ in
+                self.refreshStatus(forceUpdate: true)
+            }
+        } else if index == 7 {
+            NetworkManager.shared.setAllTorrents(pause: false) { _,_ in
+                self.refreshStatus(forceUpdate: true)
+            }
         }
-        self.refreshStatus(forceUpdate: true)
     }
     
     func clickOnEdit() {
@@ -66,13 +74,13 @@ class MainViewModel: ObservableObject {
             
             if let modelList = TorrentModel.active(fromArray: dataList)?.sorted(by: {
                 switch self.selectTabIndex {
-                case 0:
-                    return $0.size > $1.size
-                case 1:
-                    return $0.progress > $1.progress
                 case 2:
-                    return $0.dlspeed > $1.dlspeed
+                    return $0.size > $1.size
                 case 3:
+                    return $0.progress > $1.progress
+                case 0:
+                    return $0.dlspeed > $1.dlspeed
+                case 1:
                     return $0.upspeed > $1.upspeed
                 default:
                     return $0.size > $1.size

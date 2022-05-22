@@ -7,6 +7,22 @@
 
 import Foundation
 
+
+enum TorrentState: String, Codable  {
+    case error    // Some error occurred, applies to paused torrents
+    case pausedUP    // Torrent is paused and has finished downloading
+    case pausedDL    // Torrent is paused and has NOT finished downloading
+    case queuedUP    // Queuing is enabled and torrent is queued for upload
+    case queuedDL    // Queuing is enabled and torrent is queued for download
+    case uploading    // Torrent is being seeded and data is being transferred
+    case stalledUP    // Torrent is being seeded, but no connection were made
+    case checkingUP    // Torrent has finished downloading and is being checked; this status also applies to preallocation (if enabled) and checking resume data on qBt startup
+    case checkingDL    // Same as checkingUP, but torrent has NOT finished downloading
+    case downloading    // Torrent is being downloaded and data is being transferred
+    case stalledDL    // Torrent is being downloaded, but no connection were made
+    case metaDL    // Torrent has just started downloading and is fetching metadata
+}
+
 struct TorrentModel: Codable {
     let dlspeed: Int
     let eta: Int
@@ -25,7 +41,7 @@ struct TorrentModel: Codable {
 //    let savePath: String
 //    let seqDl: Int
     let size: Int
-    let state: String
+    let state: TorrentState
 //    let superSeeding: Int
     let upspeed: Int
     

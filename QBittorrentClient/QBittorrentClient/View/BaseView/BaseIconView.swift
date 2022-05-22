@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct BaseIconView: View {
-    var name: String? = nil
-    var systemName: String? = nil
+    var imageName: String? = nil
+    var imageSystemName: String? = nil
     var size: CGFloat? = AppConfig.iconSize
     var color: Color? = Color(R.color.iconColor.name)
     var paddingEdges: Edge.Set = .all
@@ -17,8 +17,8 @@ struct BaseIconView: View {
     
     var body: some View {
         Group {
-            if name != nil {
-                Image(name!)
+            if imageName != nil {
+                Image(imageName!)
                     .resizable()
                     .scaledToFit()
                     .frame(width: size, height: size)
@@ -26,8 +26,8 @@ struct BaseIconView: View {
                     .foregroundColor(color)
             }
             
-            if systemName != nil {
-                Image(systemName: systemName!)
+            if imageSystemName != nil {
+                Image(systemName: imageSystemName!)
                     .resizable()
                     .scaledToFit()
                     .frame(width: size, height: size)

@@ -37,38 +37,21 @@ struct MainView: View {
             viewModel.selectTabIndex(index)
         })
     }
+    
     var contentCellListView: some View {
-        
+//        ScrollView {
+//        ForEach(viewModel.modelList, id: \.id ) { item in
         List(viewModel.modelList, id: \.id ) { item in
             if item.type == .content, item.value is TorrentModel {
                 let model = item.value as! TorrentModel
-                
-                VStack(alignment: .leading, spacing: 8) {
-                    Text(model.name)
-                    
-                    HStack(alignment: .center, spacing: 10) {
-                        Text("Done:")
-                        Text(String(format: "%.2f%%" , model.progress*100))
-                    }
-                    
-                    HStack(spacing: 20) {
-                        VStack(alignment: .leading, spacing: 5) {
-                            Text("Size")
-                            Text(model.size.getSizeString())
-                        }
-                        VStack(alignment: .leading, spacing: 5) {
-                            Text("Down Speed")
-                            Text(model.dlspeed.getSizeString() + "/s")
-                        }
-                        VStack(alignment: .leading, spacing: 5) {
-                            Text("Up Speed")
-                            Text(model.upspeed.getSizeString() + "/s")
-                        }
-                    }
-                    
-                }
+                TorrentCellView(model: model)
+//                    .padding([.leading, .trailing], AppConfig.edgePadding)
+//                Divider()
+            } else {
+                EmptyView()
             }
         }
+//        }
     }
     
     var body: some View {
@@ -82,15 +65,15 @@ struct MainView: View {
                 .animation(.none, value: 0)
                 .navigationBarItems(
                     leading: HStack {
-                        BarButtonItem(imageSystemName: "text.justify") {
+                        BaseButtonView(imageSystemName: "text.justify", paddingLength: 0) {
                             viewModel.menuOpened.toggle()
                         }
                     },
                     trailing: HStack {
-                        BarButtonItem(imageSystemName: "arrow.clockwise.circle") {
-                            viewModel.refreshStatus()
-                        }.padding(.trailing, 10)
-                        BarButtonItem(imageSystemName: "square.and.pencil", onClicked: {
+//                        BaseButtonView(imageSystemName: "arrow.clockwise.circle", paddingLength: 0) {
+//                            viewModel.refreshStatus()
+//                        }.padding(.trailing, 10)
+                        BaseButtonView(imageSystemName: "square.and.pencil", paddingLength: 0, onClicked: {
                             viewModel.clickOnEdit()
                         })
                     }

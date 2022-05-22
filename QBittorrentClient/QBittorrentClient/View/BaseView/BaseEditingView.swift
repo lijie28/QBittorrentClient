@@ -91,7 +91,7 @@ struct BaseEditingView: View {
                         focused = (focused == .secure) ? .secure : .unSecure
                         clickCompletion?()
                     }, label: {
-                        BaseIconView(systemName:type.isSecureMode ?  "eye.slash": "eye")
+                        BaseIconView(imageSystemName:type.isSecureMode ?  "eye.slash": "eye")
                     })
                 }
             }
