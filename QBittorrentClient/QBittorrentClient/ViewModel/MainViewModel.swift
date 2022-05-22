@@ -12,8 +12,22 @@ class MainViewModel: ObservableObject {
     @Published var showingSetting = false
     @Published var title: String? = nil
     @Published var modelList: [CellInfo] = []
+    @Published var selectTabIndex = 0
+    private var myTimer: Timer? = nil
+    let sortTypeString = ["Size", "Done", "Down", "up"]
     
     init() {
+        self.myTimer = Timer.scheduledTimer(timeInterval:1,
+                                       target:self,
+                                       selector:#selector(self.refreshStatus),
+                                       userInfo:nil,
+                                       repeats:true)
+        self.refreshStatus()
+    }
+
+    
+    func selectTabIndex(_ index: NSInteger) {
+        self.selectTabIndex = index
         self.refreshStatus()
     }
     
@@ -21,7 +35,7 @@ class MainViewModel: ObservableObject {
         self.showingSetting = true
     }
     
-    func refreshStatus() {
+    @objc func refreshStatus() {
         guard let config = DefaultUtils.shared.getSettingModel() else {
             return
         }
@@ -37,9 +51,23 @@ class MainViewModel: ObservableObject {
                 return
             }
             var temp = [CellInfo]()
-            for data in dataList {
-                print(data)
-                if let dict = data as? [String: Any], let model = TorrentModel.active(fromDict: dict) {
+            
+            if let modelList = TorrentModel.active(fromArray: dataList)?.sorted(by: {
+                switch self.selectTabIndex {
+                case 0:
+                    return $0.size > $1.size
+                case 1:
+                    return $0.progress > $1.progress
+                case 2:
+                    return $0.dlspeed > $1.dlspeed
+                case 3:
+                    return $0.upspeed > $1.upspeed
+                default:
+                    return $0.size > $1.size
+                }
+                
+            }) {
+                for model in modelList {
                     temp.append(CellInfo(type: .content, value: model))
                 }
             }

@@ -29,38 +29,72 @@ extension Int {
 struct MainView: View {
     @ObservedObject var viewModel: MainViewModel
     
+    var headerTabsView: some View {
+        TabsView(width:UIScreen.main.bounds.size.width,
+                 titles: viewModel.sortTypeString,
+                 selectedIndex: viewModel.selectTabIndex,
+                 action: { (index) in
+            viewModel.selectTabIndex(index)
+        })
+    }
+    var contentCellListView: some View {
+        
+        List(viewModel.modelList, id: \.id ) { item in
+            if item.type == .content, item.value is TorrentModel {
+                let model = item.value as! TorrentModel
+                
+                VStack(alignment: .leading, spacing: 8) {
+                    Text(model.name)
+                    
+                    HStack(alignment: .center, spacing: 10) {
+                        Text("Done:")
+                        Text(String(format: "%.2f%%" , model.progress*100))
+                    }
+                    
+                    HStack(spacing: 20) {
+                        VStack(alignment: .leading, spacing: 5) {
+                            Text("Size")
+                            Text(model.size.getSizeString())
+                        }
+                        VStack(alignment: .leading, spacing: 5) {
+                            Text("Down Speed")
+                            Text(model.dlspeed.getSizeString() + "/s")
+                        }
+                        VStack(alignment: .leading, spacing: 5) {
+                            Text("Up Speed")
+                            Text(model.upspeed.getSizeString() + "/s")
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+    
     var body: some View {
         NavigationView {
-            List(viewModel.modelList, id: \.id ) { item in
-                if item.type == .content, item.value is TorrentModel {
-                    let model = item.value as! TorrentModel
-                    
-                    VStack(alignment: .leading, spacing: 0) {
-                        Text(model.name)
-                        
-                        HStack() {
-                            Text(model.size.getSizeString())
-                            Text(String(format: "%.2f%%" , model.progress*100))
-                        }
-                        
-                    }
-                }
+            VStack( alignment: .leading, spacing: 0){
+                headerTabsView
+                contentCellListView
             }
             .listStyle(PlainListStyle())
             .animation(.none, value: 0)
-                .navigationBarItems(
-                    leading: HStack {
-                        BarButtonItem(imageSystemName: "square.and.pencil", onClicked: {
-                            viewModel.clickOnEdit()
-                        })
-                    },
-                    trailing: HStack {
-                        BarButtonItem(imageSystemName: "arrow.clockwise.circle") {
-                            viewModel.refreshStatus()
-                        }.padding(.trailing, 10)
+            .navigationBarItems(
+                leading: HStack {
+                    BarButtonItem(imageSystemName: "text.justify") {
+                         
                     }
-                )
-                .navigationBarTitle(viewModel.title ?? "qbittorrent", displayMode: .inline)
+                },
+                trailing: HStack {
+                    BarButtonItem(imageSystemName: "arrow.clockwise.circle") {
+                        viewModel.refreshStatus()
+                    }.padding(.trailing, 10)
+                    BarButtonItem(imageSystemName: "square.and.pencil", onClicked: {
+                        viewModel.clickOnEdit()
+                    })
+                }
+            )
+            .navigationBarTitle(viewModel.title ?? "qbittorrent", displayMode: .inline)
             
         }
         .fullScreenCover(isPresented: $viewModel.showingSetting, content: {

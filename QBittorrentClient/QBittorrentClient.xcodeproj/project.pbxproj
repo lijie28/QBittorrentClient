@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0405440D283880110065EA6F /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0405440C283880110065EA6F /* APIError.swift */; };
 		0405440F28389AB30065EA6F /* TorrentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0405440E28389AB30065EA6F /* TorrentModel.swift */; };
+		04054411283965930065EA6F /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04054410283965930065EA6F /* TabsView.swift */; };
 		0422770728351FAD001DF6FD /* DefaultUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422770628351FAD001DF6FD /* DefaultUtils.swift */; };
 		0422770928352019001DF6FD /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422770828352019001DF6FD /* SettingModel.swift */; };
 		0422770F28372DA4001DF6FD /* MessageBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0422770E28372DA4001DF6FD /* MessageBarView.swift */; };
@@ -58,6 +59,7 @@
 		02E5887C05147176A751A4BD /* Pods-QBittorrentClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QBittorrentClient.debug.xcconfig"; path = "Target Support Files/Pods-QBittorrentClient/Pods-QBittorrentClient.debug.xcconfig"; sourceTree = "<group>"; };
 		0405440C283880110065EA6F /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		0405440E28389AB30065EA6F /* TorrentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorrentModel.swift; sourceTree = "<group>"; };
+		04054410283965930065EA6F /* TabsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
 		0422770628351FAD001DF6FD /* DefaultUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultUtils.swift; sourceTree = "<group>"; };
 		0422770828352019001DF6FD /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
 		0422770E28372DA4001DF6FD /* MessageBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageBarView.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 		0472A5CD2834125A0076F39D /* BaseView */ = {
 			isa = PBXGroup;
 			children = (
+				04054410283965930065EA6F /* TabsView.swift */,
 				0422770E28372DA4001DF6FD /* MessageBarView.swift */,
 				0472A5D22834128C0076F39D /* BaseEditingView.swift */,
 				0472A5D02834127F0076F39D /* BaseIconView.swift */,
@@ -500,6 +503,7 @@
 				0422771628376CF4001DF6FD /* NetworkManager.swift in Sources */,
 				0472A596283246950076F39D /* AppDelegate.swift in Sources */,
 				0472A598283246950076F39D /* SceneDelegate.swift in Sources */,
+				04054411283965930065EA6F /* TabsView.swift in Sources */,
 				0472A5DB2834146A0076F39D /* R.generated.swift in Sources */,
 				0472A5CF283412650076F39D /* BarItem.swift in Sources */,
 				0422770728351FAD001DF6FD /* DefaultUtils.swift in Sources */,
