@@ -18,24 +18,24 @@ class MainViewModel: ObservableObject {
     
     init() {
         self.myTimer = Timer.scheduledTimer(timeInterval:1,
-                                       target:self,
-                                       selector:#selector(self.refreshStatus),
-                                       userInfo:nil,
-                                       repeats:true)
+                                            target:self,
+                                            selector:#selector(self.refreshStatus),
+                                            userInfo:nil,
+                                            repeats:true)
         self.refreshStatus()
     }
-
+    
     
     func selectTabIndex(_ index: NSInteger) {
         self.selectTabIndex = index
-        self.refreshStatus()
+        self.refreshStatus(forceUpdate: true)
     }
     
     func clickOnEdit() {
         self.showingSetting = true
     }
     
-    @objc func refreshStatus() {
+    @objc func refreshStatus(forceUpdate: Bool = false) {
         guard let config = DefaultUtils.shared.getSettingModel() else {
             return
         }
@@ -74,16 +74,16 @@ class MainViewModel: ObservableObject {
             
             
             DispatchQueue.main.async {
-                // prevent reset scroll when data update
-                if self.modelList.count == temp.count {
+                if forceUpdate || self.modelList.count != temp.count  {
+                    self.modelList = temp
+                } else {
+                    // prevent reset scroll when data update
                     for index in 0..<self.modelList.count {
                         self.modelList[index].value = temp[index].value
                     }
-                } else {
-                    self.modelList = temp
                 }
-                
             }
+            
         }
     }
 }
