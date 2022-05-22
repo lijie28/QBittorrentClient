@@ -13,7 +13,7 @@ struct BaseButtonView: View {
     var size: CGFloat? = AppConfig.iconSize
     var color: Color? = Color(R.color.iconColor.name)
     var paddingEdges: Edge.Set = .all
-    var paddingLength: CGFloat? = nil
+    var paddingLength: CGFloat? = 0
     var onClicked: () -> Void
     
     var body: some View {

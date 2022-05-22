@@ -17,31 +17,37 @@ struct TorrentCellView: View {
                     Text(model.name)
                     Spacer()
                     
-                        Group {
-                            switch model.state {
-                            case .pausedDL, .pausedUP:
-                                
-                                BaseButtonView(imageSystemName: "pause.circle.fill", size: 35, onClicked:  {
-                                    print("pause")
-                                })
-                            default:
-                                
-                                BaseButtonView(imageSystemName: "arrowtriangle.forward.circle.fill", size: 35, onClicked:  {
-                                    print("forward")
-                                })
-                            }
+                    Group {
+                        switch model.state {
+                        case .pausedDL, .pausedUP:
+                            
+                            BaseButtonView(imageSystemName: "pause.circle.fill", size: 35, onClicked:  {
+                                print("pause")
+                            })
+                        default:
+                            
+                            BaseButtonView(imageSystemName: "arrowtriangle.forward.circle.fill", size: 35, onClicked:  {
+                                print("forward")
+                            })
                         }
-                        .buttonStyle(PlainButtonStyle())
-                    
-                    
-                    
-                }
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                }.frame(height: 50)
                 
-                
-                HStack(alignment: .center, spacing: 10) {
-                    Text("Done:")
+                ZStack(alignment: .center) {
+                    GeometryReader { gr in
+                        let superWidth = gr.size.width
+                        HStack(alignment: .center, spacing: 0) {
+                            Color.green
+                                .frame(width: superWidth * model.progress)
+                            Color.gray
+                                .frame(width: superWidth * (1 - model.progress))
+                        }
+                    }
                     Text(String(format: "%.2f%%" , model.progress*100))
-                }
+                }.frame(height: 25)
+                
+                
                 
                 HStack(spacing: 20) {
                     VStack(alignment: .leading, spacing: 5) {
