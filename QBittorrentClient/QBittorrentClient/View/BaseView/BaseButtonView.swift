@@ -7,10 +7,13 @@
 
 import SwiftUI
 
-struct BarButtonItem: View {
+struct BaseButtonView: View {
     var imageName: String?
     var imageSystemName: String?
-    var size: CGFloat? = 20
+    var size: CGFloat? = AppConfig.iconSize
+    var color: Color? = Color(R.color.iconColor.name)
+    var paddingEdges: Edge.Set = .all
+    var paddingLength: CGFloat? = nil
     var onClicked: () -> Void
     
     var body: some View {
@@ -21,7 +24,8 @@ struct BarButtonItem: View {
                         .resizable()
                         .scaledToFit()
                         .frame(width: size, height: size)
-                        .foregroundColor(Color(R.color.iconColor.name))
+                        .padding(paddingEdges, paddingLength)
+                        .foregroundColor(color)
                 })
             }
             if imageSystemName != nil {
@@ -30,7 +34,8 @@ struct BarButtonItem: View {
                         .resizable()
                         .scaledToFit()
                         .frame(width: size, height: size)
-                        .foregroundColor(Color(R.color.iconColor.name))
+                        .padding(paddingEdges, paddingLength)
+                        .foregroundColor(color)
                 })
             }
         }
@@ -41,6 +46,10 @@ struct BarImageItem: View {
     var imageName: String?
     var imageSystemName: String?
     var size: CGFloat? = 20
+    var color: Color? = Color(R.color.iconColor.name)
+    var paddingEdges: Edge.Set = .all
+    var paddingLength: CGFloat? = nil
+    
     var body: some View {
         Group {
             if imageName != nil {
@@ -48,12 +57,16 @@ struct BarImageItem: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: size, height: size)
+                    .padding(paddingEdges, paddingLength)
+                    .foregroundColor(color)
             }
             if imageSystemName != nil {
                 Image(systemName: imageSystemName!)
                     .resizable()
                     .scaledToFit()
                     .frame(width: size, height: size)
+                    .padding(paddingEdges, paddingLength)
+                    .foregroundColor(color)
             }
         }
     }

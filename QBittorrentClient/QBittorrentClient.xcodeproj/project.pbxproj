@@ -33,6 +33,7 @@
 		0472A5D32834128C0076F39D /* BaseEditingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0472A5D22834128C0076F39D /* BaseEditingView.swift */; };
 		0472A5D6283413090076F39D /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0472A5D5283413090076F39D /* AppConfig.swift */; };
 		0472A5DB2834146A0076F39D /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0472A5DA2834146A0076F39D /* R.generated.swift */; };
+		04CBFA2E283A494300A0969A /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CBFA2D283A494300A0969A /* SideMenu.swift */; };
 		268CE34DEA2207C111210BD0 /* libPods-QBittorrentClient-QBittorrentClientUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 34E7B0729832DDF7BFEF0ABA /* libPods-QBittorrentClient-QBittorrentClientUITests.a */; };
 		2C8F0898B8D2EAE5815740AA /* libPods-QBittorrentClientTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3D73C30EC993D096E87E0F1 /* libPods-QBittorrentClientTests.a */; };
 		734241875586E21DD98FC12F /* libPods-QBittorrentClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 700CECB0C98C10B4D281ED8A /* libPods-QBittorrentClient.a */; };
@@ -87,6 +88,7 @@
 		0472A5D22834128C0076F39D /* BaseEditingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseEditingView.swift; sourceTree = "<group>"; };
 		0472A5D5283413090076F39D /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		0472A5DA2834146A0076F39D /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		04CBFA2D283A494300A0969A /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
 		06DFCA655F238E47D1872B68 /* Pods-QBittorrentClientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QBittorrentClientTests.release.xcconfig"; path = "Target Support Files/Pods-QBittorrentClientTests/Pods-QBittorrentClientTests.release.xcconfig"; sourceTree = "<group>"; };
 		193BB4A99E58124A406D743C /* Pods-QBittorrentClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QBittorrentClient.release.xcconfig"; path = "Target Support Files/Pods-QBittorrentClient/Pods-QBittorrentClient.release.xcconfig"; sourceTree = "<group>"; };
 		34E7B0729832DDF7BFEF0ABA /* libPods-QBittorrentClient-QBittorrentClientUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QBittorrentClient-QBittorrentClientUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -206,6 +208,7 @@
 				0472A5CD2834125A0076F39D /* BaseView */,
 				0472A5C6283410CA0076F39D /* MainView.swift */,
 				0472A5CB2834120E0076F39D /* SettingView.swift */,
+				04CBFA2D283A494300A0969A /* SideMenu.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -492,6 +495,7 @@
 				0472A5CA283411E70076F39D /* SettingViewModel.swift in Sources */,
 				0472A5D6283413090076F39D /* AppConfig.swift in Sources */,
 				0472A59A283246950076F39D /* ViewController.swift in Sources */,
+				04CBFA2E283A494300A0969A /* SideMenu.swift in Sources */,
 				0405440F28389AB30065EA6F /* TorrentModel.swift in Sources */,
 				0422771128372DCC001DF6FD /* CellInfo.swift in Sources */,
 				0472A5C7283410CA0076F39D /* MainView.swift in Sources */,

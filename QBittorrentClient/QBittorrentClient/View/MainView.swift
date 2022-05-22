@@ -72,30 +72,42 @@ struct MainView: View {
     }
     
     var body: some View {
-        NavigationView {
-            VStack( alignment: .leading, spacing: 0){
-                headerTabsView
-                contentCellListView
-            }
-            .listStyle(PlainListStyle())
-            .animation(.none, value: 0)
-            .navigationBarItems(
-                leading: HStack {
-                    BarButtonItem(imageSystemName: "text.justify") {
-                         
-                    }
-                },
-                trailing: HStack {
-                    BarButtonItem(imageSystemName: "arrow.clockwise.circle") {
-                        viewModel.refreshStatus()
-                    }.padding(.trailing, 10)
-                    BarButtonItem(imageSystemName: "square.and.pencil", onClicked: {
-                        viewModel.clickOnEdit()
-                    })
+        ZStack {
+            NavigationView {
+                VStack( alignment: .leading, spacing: 0){
+                    headerTabsView
+                    contentCellListView
                 }
-            )
-            .navigationBarTitle(viewModel.title ?? "qbittorrent", displayMode: .inline)
+                .listStyle(PlainListStyle())
+                .animation(.none, value: 0)
+                .navigationBarItems(
+                    leading: HStack {
+                        BarButtonItem(imageSystemName: "text.justify") {
+                            viewModel.menuOpened.toggle()
+                        }
+                    },
+                    trailing: HStack {
+                        BarButtonItem(imageSystemName: "arrow.clockwise.circle") {
+                            viewModel.refreshStatus()
+                        }.padding(.trailing, 10)
+                        BarButtonItem(imageSystemName: "square.and.pencil", onClicked: {
+                            viewModel.clickOnEdit()
+                        })
+                    }
+                )
+                .navigationBarTitle(viewModel.title ?? "qbittorrent", displayMode: .inline)
+            }
             
+            .offset(x: self.viewModel.menuOpened ?
+                    0.6 * UIScreen.main.bounds.size.width : 0)
+            .animation(.default, value: self.viewModel.menuOpened ?
+                       0.6 * UIScreen.main.bounds.size.width : 0)
+            SideMenu(width: 0.6 * UIScreen.main.bounds.size.width, menuOpened: viewModel.menuOpened, toggleMenu: {
+                
+                    viewModel.menuOpened.toggle()
+            }) { index in
+                viewModel.sideMenuSelectButtonIndex(index)
+            }
         }
         .fullScreenCover(isPresented: $viewModel.showingSetting, content: {
             SettingView(viewModel: SettingViewModel()) { hasBeenEdited in

@@ -13,8 +13,13 @@ class MainViewModel: ObservableObject {
     @Published var title: String? = nil
     @Published var modelList: [CellInfo] = []
     @Published var selectTabIndex = 0
+    @Published var menuOpened = false
+    
+    
     private var myTimer: Timer? = nil
     let sortTypeString = ["Size", "Done", "Down", "up"]
+    let filterList = ["all", "downloading", "completed", "paused", "active", "inactive"]
+    var selectFilterIndex = 0
     
     init() {
         self.myTimer = Timer.scheduledTimer(timeInterval:1,
@@ -31,6 +36,13 @@ class MainViewModel: ObservableObject {
         self.refreshStatus(forceUpdate: true)
     }
     
+    func sideMenuSelectButtonIndex(_ index: NSInteger) {
+        if index < 6 {
+            self.selectFilterIndex = index
+        }
+        self.refreshStatus(forceUpdate: true)
+    }
+    
     func clickOnEdit() {
         self.showingSetting = true
     }
@@ -41,7 +53,7 @@ class MainViewModel: ObservableObject {
         }
         title = "http://\(config.ip):\(config.port)"
         
-        NetworkManager.shared.getList { respondResult, respondError in
+        NetworkManager.shared.getList(parameters: "filter=\(self.filterList[selectFilterIndex])") { respondResult, respondError in
             guard respondError == nil else {
                 debugPrint(respondError!.description)
                 return

@@ -12,14 +12,18 @@ class NetworkManager: NSObject {
     static let shared = NetworkManager()
     
     
-    func getList(completition: @escaping (([AnyObject]?, APIError?) -> Void)) {
+    func getList(parameters: String? = nil, completition: @escaping (([AnyObject]?, APIError?) -> Void)) {
         
         guard let config = DefaultUtils.shared.getSettingModel() else {
             completition(nil, APIError.unknown)
             return
         }
         let baseUrlString = "http://\(config.ip):\(config.port)"
-        guard let url = URL(string: baseUrlString+"/query/torrents") else {
+        var requestUrlString = baseUrlString + "/query/torrents"
+        if let parameters = parameters {
+            requestUrlString += "?" + parameters
+        }
+        guard let url = URL(string: requestUrlString) else {
             completition(nil, APIError.unknown)
             return
         }
@@ -35,7 +39,7 @@ class NetworkManager: NSObject {
             "Cookie": "SID=\(token)",
         ]
 //        let parameters = "username=\(config.username)&password=\(config.pwd)"
-        self.baseRequest(httpMethod: "GET", url: url, headers: headers, parameters: nil) { result, err, cookies in
+        self.baseRequest(httpMethod: "GET", url: url, headers: headers, parameters: parameters) { result, err, cookies in
             
             completition(result, err)
 //            if let error = err, error.isUnacceptableError {
@@ -101,7 +105,7 @@ class NetworkManager: NSObject {
         var request = URLRequest(url: url)
         request.httpMethod = httpMethod
         request.allHTTPHeaderFields = headers
-        if let parameters = parameters {
+        if let parameters = parameters, httpMethod == "POST" {
             request.httpBody = parameters.data(using: .utf8)
         }
         
