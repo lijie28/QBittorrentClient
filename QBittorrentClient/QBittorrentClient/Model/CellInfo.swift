@@ -24,7 +24,7 @@ struct CellInfo: Identifiable, Comparable {
     }
     
     let type: CellInfoType
-    let value: Any
+    var value: Any
     var subValue: Any? = nil
     var tag: String? = nil
     let id = UUID()

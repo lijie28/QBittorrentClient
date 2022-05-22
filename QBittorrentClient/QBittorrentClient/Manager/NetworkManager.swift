@@ -129,7 +129,6 @@ class NetworkManager: NSObject {
             }
             
             do {
-                
                 guard let respondJson = try JSONSerialization.jsonObject(with: data) as? [AnyObject] else {
                     completition(nil, APIError.jsonDecodeError(nil), cookies)
                     return

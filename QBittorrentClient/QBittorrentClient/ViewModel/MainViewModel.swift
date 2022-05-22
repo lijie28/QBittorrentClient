@@ -71,8 +71,18 @@ class MainViewModel: ObservableObject {
                     temp.append(CellInfo(type: .content, value: model))
                 }
             }
+            
+            
             DispatchQueue.main.async {
-                self.modelList = temp
+                // prevent reset scroll when data update
+                if self.modelList.count == temp.count {
+                    for index in 0..<self.modelList.count {
+                        self.modelList[index].value = temp[index].value
+                    }
+                } else {
+                    self.modelList = temp
+                }
+                
             }
         }
     }
