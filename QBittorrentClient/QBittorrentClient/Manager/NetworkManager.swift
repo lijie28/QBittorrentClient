@@ -59,7 +59,11 @@ class NetworkManager: NSObject {
         }
         
         guard let token = DefaultUtils.shared.getToken() else {
-            completition(nil, APIError.unknown)
+            self.updateCookies { [weak self] error in
+                if error == nil, let weakSelf = self {
+                    weakSelf.getList(parameters: parameters, completition: completition)
+                }
+            }
             return
         }
         

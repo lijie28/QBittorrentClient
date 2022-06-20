@@ -697,7 +697,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = T9LUTVZ3X2;
+				DEVELOPMENT_TEAM = 37G8Q52T2C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QBittorrentClient/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = QBittorrent;
@@ -729,7 +729,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = T9LUTVZ3X2;
+				DEVELOPMENT_TEAM = 37G8Q52T2C;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QBittorrentClient/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = QBittorrent;
