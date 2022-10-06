@@ -11,7 +11,6 @@ struct TorrentCellView: View {
      var model: TorrentModel
     
     var body: some View {
-        
             VStack(alignment: .leading, spacing: 8) {
                 HStack {
                     Text(model.name)
@@ -25,7 +24,6 @@ struct TorrentCellView: View {
                                 print("pause")
                             })
                         default:
-                            
                             BaseButtonView(imageSystemName: "arrowtriangle.forward.circle.fill", size: 35, onClicked:  {
                                 print("forward")
                             })
@@ -69,8 +67,8 @@ struct TorrentCellView: View {
     }
 }
 
-//struct TorrentCellView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        TorrentCellView()
-//    }
-//}
+struct TorrentCellView_Previews: PreviewProvider {
+    static var previews: some View {
+        TorrentCellView(model: TorrentModel.getPreviewModel() as! TorrentModel)
+    }
+}

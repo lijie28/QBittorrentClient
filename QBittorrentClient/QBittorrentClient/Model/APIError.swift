@@ -10,6 +10,7 @@ import Foundation
 import Foundation
 
 enum APIError: Error, CustomStringConvertible {
+    
     case needUpdate
     case badResponse(statusCode: Int)
     case ogError(Error?)

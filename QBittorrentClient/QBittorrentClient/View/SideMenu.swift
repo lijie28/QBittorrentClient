@@ -7,14 +7,7 @@
 
 import SwiftUI
 
-//extension View {
-//    func eraseToAnyView() -> AnyView {
-//        AnyView(self)
-//    }
-//}
-
 struct SideMenu: View {
-//    var selectedIndexs: [Int]
     let width: CGFloat
     let menuOpened: Bool
     let toggleMenu: () -> Void
@@ -50,48 +43,90 @@ struct MenuContent: View {
     
     var width: CGFloat
     let selectButtonIndex: (Int) -> Void
+    let buttonTitles = ["all", "downloading", "completed", "paused", "active", "inactive", "pauseAll", "resumeAll"]
+    let fontSize: CGFloat = 16
+    
+    var maxSize: CGSize = CGSize(width: 0, height: 0)
+    
+    init(width: CGFloat, selectButtonIndex: @escaping (Int) -> Void) {
+        self.width = width
+        self.selectButtonIndex = selectButtonIndex
+        self.maxSize = self.getMaxSize()
+    }
+    
+    func getMaxSize() -> CGSize {
+        var maxWidth = 0.0
+        var maxHeight = 0.0
+        for title in buttonTitles {
+            let textSize = title.getStystemStyleSize(size: fontSize)
+            if textSize.width > maxWidth {
+                maxWidth = textSize.width
+            }
+            if textSize.height > maxHeight {
+                maxHeight = textSize.height
+            }
+        }
+        return CGSize(width: maxWidth, height: maxHeight)
+    }
     
     var body: some View
     {
         VStack(alignment: .leading, spacing: 0) {
-            Button("all") {
-                selectButtonIndex(0)
+            ForEach(Array(buttonTitles.enumerated()), id: \.offset) { index, title in
+                contentCell(title: title, textSize: self.maxSize, index: index)
             }
-            .padding( 20)
-            .padding(.top, 50)
-            Button("downloading") {
-                selectButtonIndex(1)
-            }
-            .padding( 20)
-//            .padding(.top, 20)
-            Button("completed") {
-                selectButtonIndex(2)
-            }
-            .padding( 20)
-//            .padding(.top, 20)
-            Button("paused") {
-                selectButtonIndex(3)
-            }
-            .padding( 20)
-//            .padding(.top, 20)
-            Button("active") {
-                selectButtonIndex(4)
-            }
-            .padding( 20)
-//            .padding(.top, 20)
-            Button("inactive") {
-                selectButtonIndex(5)
-            }
-            .padding( 20)
-            Button("pauseAll") {
-                selectButtonIndex(6)
-            }
-            .padding( 20)
-            Button("resumeAll") {
-                selectButtonIndex(7)
-            }
-            .padding( 20)
-//            .padding(.top, 20)
         }
+        .padding(.top, 50)
+    }
+    
+    /// 侧拉菜单cell
+    /// - Parameters:
+    ///   - title: 标题
+    ///   - textSize: 算上边框的最大size
+    ///   - index: 点击标识
+    /// - Returns: View
+    func contentCell(title: String, textSize: CGSize, index: Int) -> some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(Color.gray, lineWidth: 1)
+                .frame(width: textSize.width + 12, height: textSize.height + 16)
+            Button {
+                selectButtonIndex(index)
+            } label: {
+                Text(title)
+                    .font(.system(size: fontSize))
+                    .foregroundColor(.gray)
+            }
+            .frame(width: textSize.width + 12, height: textSize.height + 16)
+            .padding(10)
+        }
+    }
+}
+
+struct SideMenu_Previews: PreviewProvider {
+    static var previews: some View {
+        SideMenu(width: 200, menuOpened: true) {
+            
+        } selectButtonIndex: { _ in
+            
+        }
+    }
+}
+
+struct MenuContent_Previews: PreviewProvider {
+    static var previews: some View {
+        MenuContent(width: 100) { index in
+            print(index)
+        }
+    }
+}
+
+
+extension String {
+    func getStystemStyleSize(size: CGFloat) -> CGSize {
+        let font = UIFont.systemFont(ofSize: size)
+        let fontAttributes = [NSAttributedString.Key.font: font]
+        let size = (self as NSString).size(withAttributes: fontAttributes)
+        return size
     }
 }

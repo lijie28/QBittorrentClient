@@ -37,6 +37,7 @@
 		04CBFA2E283A494300A0969A /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CBFA2D283A494300A0969A /* SideMenu.swift */; };
 		268CE34DEA2207C111210BD0 /* libPods-QBittorrentClient-QBittorrentClientUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 34E7B0729832DDF7BFEF0ABA /* libPods-QBittorrentClient-QBittorrentClientUITests.a */; };
 		2C8F0898B8D2EAE5815740AA /* libPods-QBittorrentClientTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3D73C30EC993D096E87E0F1 /* libPods-QBittorrentClientTests.a */; };
+		6AF616EA28E44C2900248EE9 /* BaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF616E928E44C2900248EE9 /* BaseProtocol.swift */; };
 		734241875586E21DD98FC12F /* libPods-QBittorrentClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 700CECB0C98C10B4D281ED8A /* libPods-QBittorrentClient.a */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +95,7 @@
 		06DFCA655F238E47D1872B68 /* Pods-QBittorrentClientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QBittorrentClientTests.release.xcconfig"; path = "Target Support Files/Pods-QBittorrentClientTests/Pods-QBittorrentClientTests.release.xcconfig"; sourceTree = "<group>"; };
 		193BB4A99E58124A406D743C /* Pods-QBittorrentClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QBittorrentClient.release.xcconfig"; path = "Target Support Files/Pods-QBittorrentClient/Pods-QBittorrentClient.release.xcconfig"; sourceTree = "<group>"; };
 		34E7B0729832DDF7BFEF0ABA /* libPods-QBittorrentClient-QBittorrentClientUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QBittorrentClient-QBittorrentClientUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AF616E928E44C2900248EE9 /* BaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseProtocol.swift; sourceTree = "<group>"; };
 		6CEECBE278EB1C60FE184D5A /* Pods-QBittorrentClientTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QBittorrentClientTests.debug.xcconfig"; path = "Target Support Files/Pods-QBittorrentClientTests/Pods-QBittorrentClientTests.debug.xcconfig"; sourceTree = "<group>"; };
 		700CECB0C98C10B4D281ED8A /* libPods-QBittorrentClient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QBittorrentClient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76CA01A16C12C111C11C33BA /* Pods-QBittorrentClient-QBittorrentClientUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QBittorrentClient-QBittorrentClientUITests.release.xcconfig"; path = "Target Support Files/Pods-QBittorrentClient-QBittorrentClientUITests/Pods-QBittorrentClient-QBittorrentClientUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 		0472A594283246950076F39D /* QBittorrentClient */ = {
 			isa = PBXGroup;
 			children = (
+				6AF616E928E44C2900248EE9 /* BaseProtocol.swift */,
 				0422771428376CE6001DF6FD /* Manager */,
 				0422770528351FA2001DF6FD /* Utils */,
 				0472A5D4283412FC0076F39D /* Model */,
@@ -501,6 +504,7 @@
 				04A22D20283A8DCD00DC9F0F /* TorrentCellView.swift in Sources */,
 				04CBFA2E283A494300A0969A /* SideMenu.swift in Sources */,
 				0405440F28389AB30065EA6F /* TorrentModel.swift in Sources */,
+				6AF616EA28E44C2900248EE9 /* BaseProtocol.swift in Sources */,
 				0422771128372DCC001DF6FD /* CellInfo.swift in Sources */,
 				0472A5C7283410CA0076F39D /* MainView.swift in Sources */,
 				0472A5CC2834120E0076F39D /* SettingView.swift in Sources */,
@@ -695,9 +699,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 37G8Q52T2C;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = Q7V7THHW6R;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QBittorrentClient/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = QBittorrent;
@@ -711,9 +717,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.qbittorrent.QBittorrentClient;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lj.VideoSort;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = vs_development;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -727,9 +734,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 37G8Q52T2C;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = Q7V7THHW6R;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QBittorrentClient/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = QBittorrent;
@@ -743,9 +752,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.qbittorrent.QBittorrentClient;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lj.VideoSort;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = vs_development;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

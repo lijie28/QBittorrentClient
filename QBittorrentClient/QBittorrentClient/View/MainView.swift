@@ -39,19 +39,14 @@ struct MainView: View {
     }
     
     var contentCellListView: some View {
-//        ScrollView {
-//        ForEach(viewModel.modelList, id: \.id ) { item in
         List(viewModel.modelList, id: \.id ) { item in
             if item.type == .content, item.value is TorrentModel {
                 let model = item.value as! TorrentModel
                 TorrentCellView(model: model)
-//                    .padding([.leading, .trailing], AppConfig.edgePadding)
-//                Divider()
             } else {
                 EmptyView()
             }
         }
-//        }
     }
     
     var body: some View {
@@ -70,9 +65,6 @@ struct MainView: View {
                         }
                     },
                     trailing: HStack {
-//                        BaseButtonView(imageSystemName: "arrow.clockwise.circle", paddingLength: 0) {
-//                            viewModel.refreshStatus()
-//                        }.padding(.trailing, 10)
                         BaseButtonView(imageSystemName: "square.and.pencil", paddingLength: 0, onClicked: {
                             viewModel.clickOnEdit()
                         })

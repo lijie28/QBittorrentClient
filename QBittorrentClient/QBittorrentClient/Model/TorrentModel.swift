@@ -23,28 +23,22 @@ enum TorrentState: String, Codable  {
     case metaDL    // Torrent has just started downloading and is fetching metadata
 }
 
-struct TorrentModel: Codable {
+struct TorrentModel: Codable, BaseModelProtocol {
+    static func getPreviewModel() -> BaseModelProtocol {
+        return TorrentModel(dlspeed: 20, eta: 20, hash: "hash", label: "label", name: "name", priority: 4, progress: 0.3, ratio: 0.5, size: 100, state: .pausedDL, upspeed: 30)
+    }
+    
     let dlspeed: Int
     let eta: Int
-//    let f_l_piece_prio: Int
-//    let forceStart: Int
     let hash: String
     let label: String
     let name: String
-//    let numComplete: Int
-//    let numIncomplete: Int
-//    let numLeechs: Int
-//    let numSeeds: Int
     let priority: Int
     let progress: Double
     let ratio: Double
-//    let savePath: String
-//    let seqDl: Int
     let size: Int
     let state: TorrentState
-//    let superSeeding: Int
     let upspeed: Int
-    
     
     static func active(fromDict dict: [String: Any]) -> TorrentModel? {
         do {

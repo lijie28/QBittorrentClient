@@ -73,6 +73,19 @@ class NetworkManager: NSObject {
             "Cookie": "SID=\(token)",
         ]
         self.baseRequest(httpMethod: "GET", url: url, headers: headers, parameters: parameters) { result, err, cookies in
+            if err != nil {
+                switch err {
+                case .needUpdate:
+                    self.updateCookies { upErr in
+                        completition(result, err)
+                    }
+                    break
+                default:
+                    completition(result, err)
+                    break
+                }
+                return
+            }
             completition(result, err)
         }
     }

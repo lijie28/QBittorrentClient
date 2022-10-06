@@ -26,8 +26,6 @@ struct SettingView: View {
                 }
                 
                 ScrollView(showsIndicators: false) {
-                    //                List {
-                    //                    if viewModel.isEditing {
                     Group {
                         textFildArea
                             .padding(.bottom, 10)
@@ -36,7 +34,6 @@ struct SettingView: View {
                         Divider()
                     }
                     .padding([.leading, .trailing], 8)
-                    //                    }
                     
                     if viewModel.result != nil {
                         self.sshResultView()
